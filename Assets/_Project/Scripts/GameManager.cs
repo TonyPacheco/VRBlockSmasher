@@ -19,10 +19,9 @@ public class GameManager : MonoBehaviour
     }
 
     [SerializeField]
-    private List<Block> PooledBlocks;
-    [SerializeField]
     private List<Transform> BlockPoints;
 
+    private List<Block> PooledBlocks;
     private Dictionary<int, Block> ActiveBlocks;
 
     [SerializeField]
@@ -48,6 +47,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        ActiveBlocks = new Dictionary<int, Block>();
+        PooledBlocks = new List<Block>();
     }
 
     void Start()

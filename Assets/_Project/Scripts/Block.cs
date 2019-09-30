@@ -13,7 +13,6 @@ public class Block : MonoBehaviour
     void Awake()
     {
         transform = gameObject.transform;
-        gameObject.layer = (int) GameManager.Layers.Blocks;
     }
 
     public void Init(Vector3 pos, int id, int hitsToBreak = 1, int pointValue = 10)
